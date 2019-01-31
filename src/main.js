@@ -5,6 +5,12 @@ Vue.filter('to-lowerCase', function(value){
         return value.toLowerCase();
 });
 
+Vue.mixin({
+  created(){
+    console.log('Global mixin- created() hook'); //automitacilly added to all the components
+  }
+});
+
 new Vue({
   el: '#app',
   render: h => h(App)
